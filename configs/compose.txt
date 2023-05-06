@@ -1,0 +1,66 @@
+expname: compose
+basedir: ./logs
+datadir: ./data/floor
+dataset_type: osf
+
+near: 0.01
+far: 5.0
+no_batching: True
+
+N_rand: 2048
+N_samples: 64
+N_importance: 64
+chunk: 512
+secondary_chunk: 512
+
+use_viewdirs: True
+use_lightdirs: True
+shadow_lightdirs_method: metadata
+scaled_sigmoid: True
+white_bkgd: False
+render_shadows: True
+
+render_only: True
+n_render_spiral: 40
+spiral_radius: 4.0
+render_factor: 1
+# render_moving: True
+render_indirect: True
+render_anno: True
+render_test: True
+test_indices: 30
+
+skip_metrics: True
+
+object_params: [
+    {
+        exp_dir: ./models/bowl.tar,
+        intersect_bbox: True,
+        box_center: [0, 0, 0],
+        box_dims: [1.5, 1.5, 1.0],
+        translation_delta: [0., 0., 0.],
+        rotation: [0, 0, 0],
+        translation: [0.48, -0.48, 0.2],
+        lightdirs_method: metadata,
+        render_indirect: True
+    },
+    {
+        exp_dir: ./models/airplane.tar,
+        intersect_bbox: True,
+        box_center: [0, 0, 0],
+        box_dims: [1.5, 1, 1],
+        translation_delta: [0., 0., 0.],
+        rotation: [0, 0, 0],
+        translation: [-0.56, 0.6, 0.28],
+        lightdirs_method: metadata,
+        render_indirect: True
+    },
+    {
+        exp_dir: ./models/floor.tar,
+        intersect_bbox: False,
+        render_shadows: True,
+        lightdirs_method: metadata,
+        rotation: [0, 0, 0],
+        render_indirect: True
+    }
+]

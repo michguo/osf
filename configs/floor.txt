@@ -1,0 +1,29 @@
+expname: floor
+basedir: ./logs
+datadir: ./data/floor_linear
+dataset_type: osf
+
+N_rand: 2048
+N_samples: 64
+N_importance: 128
+max_lr: 3e-3
+i_testset: 25000
+num_iters: 100000
+outmask_keep_ratio: 0
+outmask_keep_ratio_end: 0.5
+
+use_viewdirs: True
+use_lightdirs: True
+raw_noise_std: 1e0
+scaled_sigmoid: True
+testskip: 1
+
+near: 0.01
+far: 4
+
+object_params: [
+    {
+        intersect_bbox: False,
+        lightdirs_method: metadata
+    }
+]

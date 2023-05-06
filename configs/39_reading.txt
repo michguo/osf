@@ -1,0 +1,28 @@
+expname: 39_reading
+basedir: ./logs
+datadir: ./data/reading
+dataset_type: osf
+
+N_rand: 2048
+N_samples: 64
+N_importance: 128
+max_lr: 3e-3
+
+use_viewdirs: True
+use_lightdirs: True
+raw_noise_std: 1e0
+scaled_sigmoid: True
+testskip: 1
+i_testset: 100000
+
+near: 14.4
+far: 16.2
+outmask_keep_ratio: 0
+outmask_keep_ratio_end: 0.5
+
+object_params: [
+    {
+        intersect_bbox: False,
+        lightdirs_method: metadata
+    }
+]
