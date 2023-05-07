@@ -44,6 +44,10 @@ and the ObjectFolder objects together into a scene:
 python run_osf.py --config=configs/compose.txt
 ```
 
+## KiloOSF
+
+For the extension of KiloOSF where we distill a trained OSF model to accelerate rendering, please refer to [KiloOSF](https://github.com/yuyuchang/KiloOSF).
+
 ## Citation
 
 ```
@@ -57,4 +61,4 @@ python run_osf.py --config=configs/compose.txt
 
 ## Acknowledgements
 
-Our code framework is adapted from [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) and [KiloOSF](https://github.com/yuyuchang/KiloOSF).
+Our code framework is adapted from [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch).
